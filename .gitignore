@@ -54,3 +54,9 @@ target/classes/META-INF/MANIFEST.MF
 target/classes/META-INF/maven/com.demo/junit-maven-example/pom.properties
 target/classes/META-INF/maven/com.demo/junit-maven-example/pom.xml
 .classpath
+target/failsafe-reports/com.demo.junit_maven_example.CalculatorTestSuccessful.txt
+target/failsafe-reports/failsafe-summary.xml
+target/failsafe-reports/TEST-com.demo.junit_maven_example.CalculatorTestSuccessful.xml
+*.jar
+target/maven-archiver/pom.properties
+*.lst
