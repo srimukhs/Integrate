@@ -60,3 +60,5 @@ target/failsafe-reports/TEST-com.demo.junit_maven_example.CalculatorTestSuccessf
 *.jar
 target/maven-archiver/pom.properties
 *.lst
+*.txt
+*.xml

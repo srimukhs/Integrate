@@ -30,9 +30,9 @@
         <artifactId>maven-surefire-plugin</artifactId>
         <version>2.19.1</version>
         <configuration>
-          <excludes>
-            <exclude>**/Integration*.java</exclude>
-          </excludes>
+          <includes>
+            <include>**/Unit*.java</include>
+          </includes>
         </configuration>
       </plugin>
       <plugin>

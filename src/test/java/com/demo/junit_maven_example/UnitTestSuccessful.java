@@ -8,7 +8,7 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-public class CalculatorTestSuccessful {
+public class UnitTestSuccessful {
 	private static ICalculator calculator;
 
 	@BeforeClass
