@@ -33,6 +33,7 @@
           <includes>
             <include>**/Unit*.java</include>
           </includes>
+          <argLine>-agentpath:"${dt_agent_path}"=name=${dt_agent_name},server=${dt_server}</argLine>
         </configuration>
       </plugin>
       <plugin>
@@ -43,6 +44,7 @@
           <includes>
             <include>**/Integration*.java</include>
           </includes>
+          <argLine>-agentpath:"${dt_agent_path}"=name=${dt_agent_name},server=${dt_server}</argLine>
         </configuration>
         <executions>
           <execution>
