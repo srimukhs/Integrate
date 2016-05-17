@@ -12,9 +12,22 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-  </properties>
+   
+    <dynaTrace.version>6.3</dynaTrace.version>
+    <dynaTrace.agentGroup>JUnit_UnitTest_Maven</dynaTrace.agentGroup>
+    <dynaTrace.username>admin</dynaTrace.username>
+    <dynaTrace.password>admin</dynaTrace.password>
+    <dynaTrace.collector>192.168.56.1:9998</dynaTrace.collector>
+    <dynaTrace.serverUrl>http://192.168.56.1:8020</dynaTrace.serverUrl>
+</properties>
+
 
   <dependencies>
+  	<dependency>
+   	<groupId>dynaTrace</groupId>
+   	<artifactId>dtAutomation</artifactId>
+   	<version>${dynaTrace.version}</version>
+ 	</dependency>
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
@@ -25,6 +38,40 @@
   
    <build>
     <plugins>
+     <plugin>
+            <groupId>dynaTrace</groupId>
+            <artifactId>dtAutomation</artifactId>
+            <version>${dynaTrace.version}</version>
+            <executions>
+             <execution>
+                    <id>DT_StartTest_UnitTest</id>
+                    <configuration>
+                        <versionBuild>${BUILD_ID}</versionBuild>
+                        <profileName>junit-example-dt</profileName>
+                        <category>unit</category>
+                    </configuration>
+                    <!-- start this test in the process-test-classes phase
+                         which is the one before the tests are executed -->
+                    <phase>process-test-classes</phase>
+                    <goals>
+                        <!-- call the startTest goal of the dT plugin -->
+                        <goal>startTest</goal>
+                    </goals>
+                </execution>
+                <execution>
+                    <id>DT_StartTest_IntegrationTest</id>
+                    <configuration>
+                        <versionBuild>${BUILD_ID}</versionBuild>
+                        <profileName>junit-example-dt</profileName>
+                        <category>performance</category>
+                    </configuration>
+                    <phase>pre-integration-test</phase>
+                    <goals>
+                        <goal>startTest</goal>
+                    </goals>
+                </execution>
+            </executions>
+        </plugin>
     <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-plugin</artifactId>
@@ -33,7 +80,7 @@
           <includes>
             <include>**/Unit*.java</include>
           </includes>
-          <!-- <argLine>-agentpath:"${dt_agent_path}"=name=${dt_agent_name},server=${dt_server},optionTestRunIdJava=${dtTestrunID}</argLine>  -->
+          <argLine>-agentpath:"${dt_agent_path}"=name=${dt_agent_name},server=${dt_server},optionTestRunIdJava=${dtTestrunID}</argLine>
         </configuration>
       </plugin>
       <plugin>
