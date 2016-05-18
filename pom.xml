@@ -14,7 +14,7 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
    
     <dynaTrace.version>6.3</dynaTrace.version>
-    <dynaTrace.agentGroup>JUnit_UnitTest_Maven</dynaTrace.agentGroup>
+    <dynaTrace.agentGroup>Maven_JUnit_UnitTest</dynaTrace.agentGroup>
     <dynaTrace.username>admin</dynaTrace.username>
     <dynaTrace.password>admin</dynaTrace.password>
     <dynaTrace.collector>192.168.56.1:9998</dynaTrace.collector>
@@ -47,6 +47,10 @@
                     <id>DT_StartTest_UnitTest</id>
                     <configuration>
                         <versionBuild>${BUILD_ID}</versionBuild>
+                         <versionMajor>1</versionMajor>
+                        <versionMinor>2</versionMinor>
+                        <versionRevision>3</versionRevision>
+                        <versionMilestone>5</versionMilestone>
                         <profileName>junit-example-dt-maven</profileName>
                         <category>unit</category>
                     </configuration>
@@ -62,6 +66,10 @@
                     <id>DT_StartTest_IntegrationTest</id>
                     <configuration>
                         <versionBuild>${BUILD_ID}</versionBuild>
+                         <versionMajor>1</versionMajor>
+                        <versionMinor>2</versionMinor>
+                        <versionRevision>3</versionRevision>
+                        <versionMilestone>5</versionMilestone>
                         <profileName>junit-example-dt-maven</profileName>
                         <category>performance</category>
                     </configuration>
