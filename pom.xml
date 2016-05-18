@@ -4,7 +4,7 @@
 
   <groupId>com.demo</groupId>
   <artifactId>junit-maven-example</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>1.2.3-SNAPSHOT</version>
   <packaging>jar</packaging>
 
   <name>junit-maven-example</name>
@@ -47,10 +47,6 @@
                     <id>DT_StartTest_UnitTest</id>
                     <configuration>
                         <versionBuild>${BUILD_ID}</versionBuild>
-                         <versionMajor>1</versionMajor>
-                        <versionMinor>2</versionMinor>
-                        <versionRevision>3</versionRevision>
-                        <versionMilestone>5</versionMilestone>
                         <profileName>junit-example-dt-maven</profileName>
                         <category>unit</category>
                     </configuration>
@@ -66,10 +62,6 @@
                     <id>DT_StartTest_IntegrationTest</id>
                     <configuration>
                         <versionBuild>${BUILD_ID}</versionBuild>
-                         <versionMajor>1</versionMajor>
-                        <versionMinor>2</versionMinor>
-                        <versionRevision>3</versionRevision>
-                        <versionMilestone>5</versionMilestone>
                         <profileName>junit-example-dt-maven</profileName>
                         <category>performance</category>
                     </configuration>
