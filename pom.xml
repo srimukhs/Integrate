@@ -47,7 +47,7 @@
                     <id>DT_StartTest_UnitTest</id>
                     <configuration>
                         <versionBuild>${BUILD_ID}</versionBuild>
-                        <profileName>junit-example-dt</profileName>
+                        <profileName>junit-example-dt-maven</profileName>
                         <category>unit</category>
                     </configuration>
                     <!-- start this test in the process-test-classes phase
@@ -62,7 +62,7 @@
                     <id>DT_StartTest_IntegrationTest</id>
                     <configuration>
                         <versionBuild>${BUILD_ID}</versionBuild>
-                        <profileName>junit-example-dt</profileName>
+                        <profileName>junit-example-dt-maven</profileName>
                         <category>performance</category>
                     </configuration>
                     <phase>pre-integration-test</phase>
