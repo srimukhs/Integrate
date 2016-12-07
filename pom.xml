@@ -43,7 +43,10 @@
           <includes>
             <include>**/Integration*.java</include>
           </includes>
+           
+          <skipTests>true</skipTests>
         </configuration>
+        
         <executions>
           <execution>
             <goals>
